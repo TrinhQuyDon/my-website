@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ Hợp tác & Gửi tin nhắn cho Kỹ sư Trịnh Quý Đôn</title>
+  
+  <meta name="description" content="Gửi tin nhắn liên hệ, trao đổi cơ hội việc làm hoặc đề xuất hợp tác dự án công nghệ trực tiếp với Trịnh Quý Đôn thông qua biểu mẫu trực tuyến nhanh chóng." />
+  
+  <meta property="og:title" content="Liên hệ Hợp tác & Gửi tin nhắn cho Kỹ sư Trịnh Quý Đôn" />
+  <meta property="og:description" content="Gửi tin nhắn liên hệ, trao đổi cơ hội việc làm hoặc đề xuất hợp tác dự án công nghệ trực tiếp với Trịnh Quý Đôn thông qua biểu mẫu trực tuyến nhanh chóng." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+    }
+
+    header {
+      border-bottom: 2px solid #333;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 { font-size: 1.4rem; color: #111; }
+    header p  { font-size: 0.9rem; color: #555; }
+
+    nav { display: flex; gap: 1rem; }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover { border-bottom-color: #333; }
+    nav a[href="contact.html"] { border-bottom-color: #333; }
+
+    main {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      color: #111;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .subtitle { color: #555; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+    /* Form Styles */
+    .form-group { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 1rem; }
+    
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #fafafa;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #111;
+      background: #fff;
+      padding: 0 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .field { display: flex; flex-direction: column; gap: 0.3rem; }
+
+    label { font-size: 0.85rem; font-weight: 600; color: #333; }
+
+    input, select, textarea {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #222;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      padding: 0.55rem 0.8rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+      background: #fff;
+    }
+
+    input:focus, select:focus, textarea:focus { border-color: #555; }
+    input::placeholder, textarea::placeholder { color: #aaa; }
+    select { cursor: pointer; }
+    textarea { resize: vertical; min-height: 110px; }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .radio-group input, .checkbox-group input {
+      width: auto;
+      cursor: pointer;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    button {
+      background: #222;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.65rem 1.25rem;
+      cursor: pointer;
+      flex: 1;
+      transition: background 0.2s;
+    }
+
+    button[type="reset"] {
+      background: #777;
+    }
+
+    button:hover { background: #444; }
+    button[type="reset"]:hover { background: #555; }
+
+    /* Info */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .info-card {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      background: #fafafa;
+    }
+
+    .info-card .info-label { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+    .info-card a, .info-card span { font-size: 0.85rem; color: #222; text-decoration: none; }
+    .info-card a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    footer address { font-style: normal; color: #444; font-size: 0.875rem; margin-bottom: 0.4rem; }
+    footer address a { color: #222; }
+    footer p    { font-size: 0.8rem; color: #777; }
+    footer time { display: block; font-size: 0.75rem; color: #aaa; margin-top: 0.2rem; }
+
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } .form-actions { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Quý Đôn</h1>
+      <p>Kỹ sư công nghệ</p>
+    </div>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="about.html">Giới thiệu</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Liên hệ</h2>
+      <p class="subtitle">Vui lòng điền thông tin bên dưới, tôi sẽ phản hồi trong vòng 24 giờ.</p>
+
+      <form action="#" method="POST" class="form-group">
+        
+        <fieldset>
+          <legend>Thông tin cá nhân</legend>
+          
+          <div class="form-row">
+            <div class="field">
+              <label for="fullname">Họ và tên: *</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Trịnh Quý Đôn" required minlength="2" />
+            </div>
+            
+            <div class="field">
+              <label for="phone">Số điện thoại:</label>
+              <input type="tel" id="phone" name="phone" placeholder="0901 234 567" pattern="[0-9]{10,11}" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email: *</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="dob">Ngày sinh:</label>
+              <input type="date" id="dob" name="dob" />
+            </div>
+
+            <div class="field">
+              <label for="university">Trường đại học:</label>
+              <input list="uni-list" id="university" name="university" placeholder="Chọn hoặc nhập trường..." />
+              <datalist id="uni-list">
+                <option value="Đại học Gia Định"></option>
+                <option value="Đại học Khoa học Tự nhiên"></option>
+                <option value="Đại học Bách Khoa"></option>
+                <option value="Đại học Công nghệ Thông tin"></option>
+              </datalist>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Nội dung liên hệ</legend>
+          
+          <div class="field">
+            <label for="subject">Chủ đề:</label>
+            <select id="subject" name="subject">
+              <option value="support">Hỗ trợ</option>
+              <option value="study">Học tập</option>
+              <option value="other">Khác</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Ưu tiên liên hệ qua:</label>
+            <div class="radio-group">
+              <input type="radio" id="via-email" name="contact-via" value="email" checked />
+              <label for="via-email">Email</label>
+
+              <input type="radio" id="via-phone" name="contact-via" value="phone" />
+              <label for="via-phone">Điện thoại</label>
+
+              <input type="radio" id="via-zalo" name="contact-via" value="zalo" />
+              <label for="via-zalo">Zalo</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Tin nhắn: *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn (tối thiểu 10 ký tự)..." required minlength="10"></textarea>
+          </div>
+
+          <div class="field">
+            <div class="checkbox-group">
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree">Tôi đồng ý với các điều khoản sử dụng *</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit">Gửi tin nhắn</button>
+          
+          <button type="reset">Xoá và nhập lại</button>
+        </div>
+      </form>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-label">Email</div>
+          <a href="mailto:quydon@email.com">quydon@email.com</a>
+        </div>
+        <div class="info-card">
+          <div class="info-label">Điện thoại</div>
+          <a href="tel:0901234567">0901 234 567</a>
+        </div>
+        <div class="info-card">
+          <div class="info-label">GitHub</div>
+          <a href="https://github.com/TrinhQuyDon" target="_blank" rel="noopener">TrinhQuyDon</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Email: <a href="mailto:quydon@email.com">quydon@email.com</a> |
+      SĐT: <a href="tel:0901234567">0901 234 567</a>
+    </address>
+    <p>&copy; 2026 Quý Đôn. All rights reserved.</p>
+    <time datetime="2026-06-01">Cập nhật lần cuối: 01/06/2026</time>
+  </footer>
+
+</body>
+</html>
