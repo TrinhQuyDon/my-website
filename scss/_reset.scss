@@ -1,0 +1,63 @@
+
+@use 'variables' as *;
+
+// CSS Reset
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Base body
+body {
+  font-family: $font-base;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+  font-size: $font-size;
+}
+
+// Typography
+p {
+  color: $color-text-muted;
+  line-height: 1.7;
+}
+
+h2 {
+  color: $color-primary;
+  font-size: 1.3rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: $spacing;
+}
+
+// Links
+a {
+  color: $color-secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: #0d9488;
+    text-decoration: underline;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Highlight class
+.highlight {
+  background: #fef3c7;
+  padding: 4px 8px;
+  border-radius: $radius * 0.5;
+}
+
+// ID selector
+#main-title {
+  font-size: 2rem;
+  color: $color-primary;
+}

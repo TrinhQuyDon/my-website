@@ -1,29 +1,297 @@
-/* Bước 4: Định dạng cho toàn bộ trang (body) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Bạn có thể đổi mã màu nền tùy thích */
-    padding: 20px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #1e293b;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-/* Bước 5: Định dạng tiêu đề chính h1 */
-h1 {
-    color: #028090; 
-    text-align: center;
-}
-
-/* Bước 6: Định dạng đoạn văn bản p */
 p {
-    line-height: 1.6;
-    max-width: 700px;
+  color: #334155;
+  line-height: 1.7;
 }
 
-/* Bước 8 (Nâng cao): CSS để h2 có màu khác h1 và có đường kẻ ngang */
 h2 {
-    color: #d35400;
-    border-bottom: 2px solid #ccc;
+  color: #1a2e5a;
+  font-size: 1.3rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 16px;
 }
 
-/* Bước 9 (Nâng cao): Thêm thuộc tính hover cho thẻ a (liên kết) */
-a:hover {
-    color: red;
+a {
+  color: #1d6fa4;
+  text-decoration: none;
 }
+a:hover {
+  color: #0d9488;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.highlight {
+  background: #fef3c7;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+#main-title {
+  font-size: 2rem;
+  color: #1a2e5a;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.sidebar {
+  display: none;
+  background: #f1f5f9;
+  padding: 24px;
+  border-radius: 8px;
+  align-self: start;
+}
+.sidebar h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a2e5a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar a {
+  color: #334155;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  color: #1d6fa4;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+.card h3 {
+  color: #1a2e5a;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.card p {
+  font-size: 0.875rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 16px 32px;
+  background: #1a2e5a;
+}
+.navbar .logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.navbar .nav-links a {
+  color: #93c5fd;
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.navbar .nav-links a:hover {
+  color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+  background: #1d6fa4;
+  color: white;
+  text-align: center;
+  padding: 48px 16px;
+  gap: 16px;
+}
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.hero p {
+  color: #bfdbfe;
+  max-width: 480px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 24px;
+  background: white;
+  color: #1a2e5a;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.88;
+  text-decoration: none;
+  color: #1a2e5a;
+}
+
+.skill-card {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+  margin-bottom: 0;
+}
+.skill-card h3 {
+  color: #1a2e5a;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.skill-card p {
+  font-size: 0.85rem;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.cards-grid .card {
+  flex: 1;
+  min-width: 250px;
+}
+
+footer {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 16px 32px;
+  margin-top: 48px;
+}
+footer .footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+footer p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+footer address {
+  font-style: normal;
+  font-size: 0.875rem;
+}
+footer address a {
+  color: #93c5fd;
+}
+footer address a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.navbar .nav-links {
+  width: 100%;
+}
+.navbar .nav-links a {
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+@media (orientation: landscape) and (max-width: 767px) {
+  .hero {
+    min-height: 180px;
+    padding: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .navbar .nav-links {
+    width: auto;
+  }
+  .navbar .nav-links a {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+  .page-layout {
+    grid-template-columns: 220px 1fr;
+    grid-template-areas: "sidebar main";
+    gap: 32px;
+    padding: 32px 16px;
+  }
+  .sidebar {
+    display: block;
+    grid-area: sidebar;
+  }
+  .page-layout > main {
+    grid-area: main;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 240px 1fr;
+    padding: 32px 0;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

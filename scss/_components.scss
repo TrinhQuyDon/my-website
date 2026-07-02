@@ -1,0 +1,143 @@
+// =====================================================
+// _components.scss — Mục 5: 2 mixin
+// @mixin flex-center($direction:row)
+// @mixin card-style()
+// Áp dụng vào .card và .navbar
+// =====================================================
+@use 'variables' as *;
+
+// === MIXIN 1: flex-center ===
+@mixin flex-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: $direction;
+}
+
+// === MIXIN 2: card-style ===
+@mixin card-style() {
+  background: white;
+  padding: $spacing * 1.5;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  margin-bottom: $spacing;
+}
+
+// === COMPONENTS ===
+
+// .card
+.card {
+  @include card-style();
+
+  h3 {
+    color: $color-primary;
+    font-size: 1rem;
+    margin-bottom: $spacing * 0.5;
+  }
+
+  p { font-size: 0.875rem; }
+}
+
+// .navbar
+.navbar {
+  @include flex-center(row);
+  padding: $spacing ($spacing * 2);
+  background: $color-primary;
+
+  .logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .nav-links a {
+    color: $color-accent;
+    margin-left: $spacing * 1.5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+
+    &:hover { color: white; }
+  }
+}
+
+// .hero
+.hero {
+  @include flex-center(column);
+  justify-content: center;
+  min-height: 300px;
+  background: $color-secondary;
+  color: white;
+  text-align: center;
+  padding: ($spacing * 3) $spacing;
+  gap: $spacing;
+
+  h1 { font-size: 2rem; font-weight: 700; }
+  p  { color: #bfdbfe; max-width: 480px; }
+}
+
+// .btn-primary
+.btn-primary {
+  display: inline-block;
+  padding: ($spacing * 0.625) ($spacing * 1.5);
+  background: white;
+  color: $color-primary;
+  border-radius: $radius * 0.75;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.88;
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+// .skill-card
+.skill-card {
+  @include card-style();
+  margin-bottom: 0;
+
+  h3 { color: $color-primary; font-size: 0.95rem; margin-bottom: 6px; }
+  p  { font-size: 0.85rem; }
+}
+
+// .cards-grid (index.html)
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing * 1.5;
+
+  .card {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
+// Footer
+footer {
+  background-color: $color-text;
+  color: #94a3b8;
+  padding: $spacing ($spacing * 2);
+  margin-top: $spacing * 3;
+
+  .footer-inner {
+    @include flex-center(row);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  p { color: #94a3b8; font-size: 0.875rem; }
+
+  address {
+    font-style: normal;
+    font-size: 0.875rem;
+
+    a {
+      color: $color-accent;
+      &:hover { color: white; text-decoration: none; }
+    }
+  }
+}
